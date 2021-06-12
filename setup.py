@@ -6,8 +6,10 @@ about = dict()
 with open(os.path.join(here, 'pyepisodate', '__version__.py'), 'r') as f:
     exec(f.read(), about)
 
-with open('README.md', 'rt') as f:
+with open(os.path.join(here, 'README.md'), 'r') as f:
     long_description = f.read()
+
+download_path = sorted(os.listdir(os.path.join(here, 'dist')))[-1]
 
 setup(
   name = 'pyepisodate',
@@ -20,7 +22,7 @@ setup(
   author = 'guiszk',
   author_email = 'guiszk@protonmail.com',
   url = 'https://github.com/guiszk/pyepisodate',
-  download_url = 'https://github.com/guiszk/pyepisodate/dist/pyepisodate-0.0.1.tar.gz',
+  download_url = 'https://github.com/guiszk/pyepisodate/dist/' + download_path,
   keywords = ['api', 'episodate', 'python'],
   install_requires=['requests'],
   classifiers=[
