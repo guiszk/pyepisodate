@@ -6,7 +6,7 @@ about = dict()
 with open(os.path.join(here, 'pyepisodate', '__version__.py'), 'r') as f:
     exec(f.read(), about)
 
-with open(os.path.join(here, 'README.md'), 'r') as f:
+with open(os.path.join(here, 'README.rst'), 'r') as f:
     long_description = f.read()
 
 download_path = sorted(os.listdir(os.path.join(here, 'dist')))[-1]
@@ -18,7 +18,7 @@ setup(
   license='BSD',
   description = 'A python wrapper for the EpisoDate API',
   long_description = long_description,
-  long_description_content_type = 'text/markdown',
+  long_description_content_type = 'text/x-rst',
   author = 'guiszk',
   author_email = 'guiszk@protonmail.com',
   url = 'https://github.com/guiszk/pyepisodate',
