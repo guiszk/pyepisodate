@@ -17,8 +17,8 @@ Create an object
 
 .. code:: python
 
-   import pyepisodate
-   episodate = pyepisodate.episodate()
+   from pyepisodate import pyepisodate
+   episodate = pyepisodate()
 
 Methods
 ~~~~~~~

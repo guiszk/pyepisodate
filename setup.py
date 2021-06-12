@@ -9,7 +9,12 @@ with open(os.path.join(here, 'pyepisodate', '__version__.py'), 'r') as f:
 with open(os.path.join(here, 'README.rst'), 'r') as f:
     long_description = f.read()
 
-download_path = sorted(os.listdir(os.path.join(here, 'dist')))[-1]
+try:
+    download_path = sorted(os.listdir(os.path.join(here, 'dist')))[-1]
+except FileNotFoundError:
+    download_path = 'pyepisodate-0.0.1.tar.gz'
+except IndexError:
+    download_path = 'pyepisodate-0.0.1.tar.gz'
 
 setup(
   name = 'pyepisodate',

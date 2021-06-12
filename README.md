@@ -9,8 +9,8 @@ A python wrapper for the [EpisoDate API](https://www.episodate.com/api)
 
 ### Create an object
 ```Python
-import pyepisodate
-episodate = pyepisodate.episodate()
+from pyepisodate import pyepisodate
+episodate = pyepisodate()
 ```
 
 ### Methods

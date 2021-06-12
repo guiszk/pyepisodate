@@ -3,7 +3,7 @@ from logging import warnings
 import json
 from urllib.parse import quote
 
-class episodate:
+class pyepisodate:
     def __init__(self):
         self.base = 'https://episodate.com'
         pass
