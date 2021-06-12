@@ -15,7 +15,7 @@ setup(
   author = 'guiszk',
   author_email = 'guiszk@protonmail.com',
   url = 'https://github.com/guiszk/pyepisodate',
-  download_url = 'https://github.com/guiszk/pyepisodate/v_01.tar.gz',
+  download_url = 'https://github.com/guiszk/pyepisodate/dist/pyepisodate-0.4.2.tar.gz',
   keywords = ['api', 'episodate', 'api'],
   install_requires=['requests'],
   classifiers=[
