@@ -1,5 +1,5 @@
 import requests
-from logging import logging, warnings
+from logging import warnings
 import json
 from urllib.parse import quote
 
@@ -15,7 +15,7 @@ class episodate:
         j = json.loads(r.text)
         res = [show['permalink'] for show in j['tv_shows']]
         if(len(res) == 0):
-            #print('Error: no matches found for {}'.format('showname'))
+            print('Error: no matches found for {}'.format('showname'))
             warnings.warn('Error: no matches found for {}'.format('showname'))
             return 1
         return res
