@@ -15,8 +15,7 @@ class pyepisodate:
         j = json.loads(r.text)
         res = [show['permalink'] for show in j['tv_shows']]
         if(len(res) == 0):
-            print('Error: no matches found for {}'.format('showname'))
-            warnings.warn('Error: no matches found for {}'.format('showname'))
+            warnings.warn('Error: no matches found for {}'.format(showname))
             return 1
         return res
 
@@ -30,9 +29,7 @@ class pyepisodate:
     def show(self, showname):
         shows = self.search(showname)
         if(len(shows) > 1 and not(showname in shows)):
-            #print('Error: multiple matches found for \'{}\'. Please refine your search.'.format(showname))
             warnings.warn('Error: multiple matches found for \'{}\'. Please refine your search.'.format(showname))
-            #print('Matches: {}'.format(', '.join(shows)))
             warnings.warn('Matches: {}'.format(', '.join(shows)))
             return 1
         url = self.base + '/api/show-details?q={}'.format(showname)
